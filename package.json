@@ -1,0 +1,42 @@
+{
+  "name": "exemplar-docs",
+  "private": true,
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/io-timeout/exemplar-docs.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check"
+  },
+  "devDependencies": {
+    "@exemplarjs/canonical": "catalog:",
+    "@exemplarjs/catalog": "catalog:",
+    "@exemplarjs/dom": "catalog:",
+    "@exemplarjs/encodings-cjk": "catalog:",
+    "@exemplarjs/sax": "catalog:",
+    "@exemplarjs/validation": "catalog:",
+    "@exemplarjs/writer": "catalog:",
+    "@exemplarjs/xdm": "catalog:",
+    "@exemplarjs/xinclude": "catalog:",
+    "@exemplarjs/xml": "catalog:",
+    "@exemplarjs/xpath": "catalog:",
+    "@shikijs/vitepress-twoslash": "catalog:",
+    "@types/node": "catalog:",
+    "lefthook": "catalog:",
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:",
+    "oxlint-tsgolint": "catalog:",
+    "typescript": "catalog:",
+    "vitepress": "catalog:",
+    "vue": "catalog:"
+  },
+  "packageManager": "pnpm@12.9.1"
+}

@@ -1,0 +1,16 @@
+/* The landing page's name: "exemplar" with a dot under its x, m and l. */
+.VPHero .name .xml {
+  position: relative;
+}
+
+.VPHero .name .xml::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -0.02em;
+  width: 0.13em;
+  height: 0.13em;
+  margin-left: -0.065em;
+  border-radius: 50%;
+  background: var(--vp-c-brand-1);
+}
