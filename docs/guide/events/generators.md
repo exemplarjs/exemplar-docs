@@ -371,8 +371,8 @@ An `XMLOutputFactory` made with `repairNamespaces: true` adds missing declaratio
 ## Next steps
 
 - Two worked examples in the exemplar repository are complete programs:
-  [a generator into a tree and XPath](https://github.com/io-timeout/exemplar/tree/main/examples/09-change-events-with-a-generator)
-  and [a generator into a new document](https://github.com/io-timeout/exemplar/tree/main/examples/10-events-into-a-file).
+  [a generator into a tree and XPath](https://github.com/exemplarjs/exemplar/tree/main/examples/09-change-events-with-a-generator)
+  and [a generator into a new document](https://github.com/exemplarjs/exemplar/tree/main/examples/10-events-into-a-file).
 - [Copying and changing documents](/guide/writing/copying): the other ways to transform a document on its way to a
   writer, and how to choose between them.
 - [Pipelines](/guide/pipelines): how the reading APIs, trees and writers connect.

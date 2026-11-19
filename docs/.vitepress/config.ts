@@ -154,7 +154,7 @@ export default defineConfig({
       ],
     },
     search: { provider: 'local' },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/io-timeout/exemplar' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/exemplarjs/exemplar' }],
     footer: { message: 'Released under the Apache License 2.0.' },
   },
 });

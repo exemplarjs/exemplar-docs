@@ -1,11 +1,11 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 
-/** Where exemplar-tests' release job puts each release's report: `<version>/bench.md`, `bench.json` and `charts/`. */
+/** Where exemplar's release workflow puts each release's report: `<version>/bench.md`, `bench.json` and `charts/`. */
 export const REPORTS = path.resolve('docs/public/benchmarks');
 
 /** Where links in a report to exemplar-tests' own documents point. */
-const TESTS_REPOSITORY = 'https://github.com/io-timeout/exemplar-tests/blob/main';
+const TESTS_REPOSITORY = 'https://github.com/exemplarjs/exemplar-tests/blob/main';
 
 /** The released versions that have a report, newest first. */
 export function releases(): string[] {

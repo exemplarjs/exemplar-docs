@@ -356,9 +356,9 @@ new SAXParser().parse(source, new AddStock(stock, writing));
 ```
 
 Two worked examples in the exemplar repository take this further:
-[SAX filters into XPath](https://github.com/io-timeout/exemplar/tree/main/examples/07-sax-filters-into-xpath) looks up
+[SAX filters into XPath](https://github.com/exemplarjs/exemplar/tree/main/examples/07-sax-filters-into-xpath) looks up
 prices and regions and totals orders, and
-[SAX filters into a file](https://github.com/io-timeout/exemplar/tree/main/examples/08-sax-filters-into-a-file) changes
+[SAX filters into a file](https://github.com/exemplarjs/exemplar/tree/main/examples/08-sax-filters-into-a-file) changes
 attributes and writes a new document.
 
 ## Catch a filter's mistakes

@@ -298,13 +298,13 @@ The same option applies to the event writer and the SAX writing handler.
 
 Four worked examples in the exemplar repository are complete programs:
 
-- [Change content with a delegate](https://github.com/io-timeout/exemplar/tree/main/examples/04-change-content-with-a-delegate):
+- [Change content with a delegate](https://github.com/exemplarjs/exemplar/tree/main/examples/04-change-content-with-a-delegate):
   stacked delegates convert units, copied from a file stream with `copyAsync`.
-- [Filter into a new document](https://github.com/io-timeout/exemplar/tree/main/examples/06-filter-into-a-new-document):
+- [Filter into a new document](https://github.com/exemplarjs/exemplar/tree/main/examples/06-filter-into-a-new-document):
   filters drop elements and layout, and the writer indents afresh.
-- [SAX filters into a file](https://github.com/io-timeout/exemplar/tree/main/examples/08-sax-filters-into-a-file): SAX
+- [SAX filters into a file](https://github.com/exemplarjs/exemplar/tree/main/examples/08-sax-filters-into-a-file): SAX
   filters change attributes on the way to a writing handler.
-- [Events into a file](https://github.com/io-timeout/exemplar/tree/main/examples/10-events-into-a-file): a generator
+- [Events into a file](https://github.com/exemplarjs/exemplar/tree/main/examples/10-events-into-a-file): a generator
   renames elements on the way to an event writer.
 
 Elsewhere in this guide:

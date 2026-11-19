@@ -1,11 +1,11 @@
 # exemplar-docs
 
-The documentation site for [exemplar](https://github.com/io-timeout/exemplar), built with
+The documentation site for [exemplar](https://github.com/exemplarjs/exemplar), built with
 [VitePress](https://vitepress.dev).
 
 ## Working on it
 
-With [exemplar](https://github.com/io-timeout/exemplar) checked out beside this repository, its packages are linked from
+With [exemplar](https://github.com/exemplarjs/exemplar) checked out beside this repository, its packages are linked from
 there (`.pnpmfile.mjs`); otherwise the latest published release is used.
 
 ```bash
@@ -17,7 +17,7 @@ pnpm dev
 
 ## Checks
 
-A pull request here checks format, lint, types and the site's links; `EXEMPLAR_DOCS_SKIP_SAMPLES=true pnpm build` builds without type-checking the samples. Type-checking the samples needs exemplar's build, so it runs in [exemplar's workflows](https://github.com/io-timeout/exemplar/tree/main/.github/workflows): each exemplar pull request builds this site, on the branch named like it or else on `main`.
+A pull request here checks format, lint, types and the site's links; `EXEMPLAR_DOCS_SKIP_SAMPLES=true pnpm build` builds without type-checking the samples. Type-checking the samples needs exemplar's build, so it runs in [exemplar's workflows](https://github.com/exemplarjs/exemplar/tree/main/.github/workflows): each exemplar pull request builds this site, on the branch named like it or else on `main`.
 
 ## Layout
 
@@ -46,7 +46,7 @@ const reader = xml.createStreamReader(source);
 
 ## Benchmark reports
 
-exemplar-tests' release job benchmarks each release and opens a pull request here that adds its report folder,
+exemplar's release workflow benchmarks each release, through exemplar-tests, and opens a pull request here that adds the report folder,
 `tools/bench/reports/` as it is, at `docs/public/benchmarks/<version>/`: `bench.md`, `bench.json` and `charts/`. Each
 version gets a page at `/benchmarks/<version>`, rendered from its `bench.md`, and the newest is linked from
 `/benchmarks/`.
