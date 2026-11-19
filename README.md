@@ -15,6 +15,10 @@ pnpm dev
 
 `pnpm build` builds the site into `docs/.vitepress/dist`, and fails on a sample that does not compile or a dead link.
 
+## Deploying
+
+Each push to `main` builds the site and publishes it to GitHub Pages at https://exemplar.l47.net (`.github/workflows/deploy.yaml`). The build installs the latest published exemplar packages, so its samples are type-checked against them. A benchmark report's pull request is the usual change that triggers it.
+
 ## Checks
 
 A pull request here checks format, lint, types and the site's links; `EXEMPLAR_DOCS_SKIP_SAMPLES=true pnpm build` builds without type-checking the samples. Type-checking the samples needs exemplar's build, so it runs in [exemplar's workflows](https://github.com/exemplarjs/exemplar/tree/main/.github/workflows): each exemplar pull request builds this site, on the branch named like it or else on `main`.
