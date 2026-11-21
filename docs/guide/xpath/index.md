@@ -141,6 +141,35 @@ for (const document of documents) {
 One compiler can serve a whole program as well. It holds the settings its expressions share, such as namespace
 bindings.
 
+### The compiler keeps its executables
+
+Sometimes there is nowhere convenient to keep an executable: the expression arrives as text each time, read from
+configuration or from the document being processed. The compiler keeps the executables it makes, so `compile` returns
+the one it already has when it is given the same expression again.
+
+```ts twoslash
+const first = compiler.compile('//book[price < 10]/title');
+const again = compiler.compile('//book[price < 10]/title');
+
+console.log(first === again);
+// true
+```
+
+Two calls share an executable when the expression text and the declared variables are both the same, and the variables
+are declared in the same order. The cache holds the 256 executables used most recently and belongs to the compiler, so
+it is released with it.
+
+To have `compile` return a new executable on each call, turn the `cache` option off:
+
+```ts twoslash
+import { XPathCompiler } from '@exemplarjs/xpath';
+// ---cut---
+const uncached = new XPathCompiler({ cache: false });
+
+console.log(uncached.compile('//book') === uncached.compile('//book'));
+// false
+```
+
 ## Pass a value in
 
 Do not build an expression by concatenating strings. Declare a variable at compile time and supply its value at

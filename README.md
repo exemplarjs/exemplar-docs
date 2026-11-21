@@ -15,9 +15,9 @@ pnpm dev
 
 `pnpm build` builds the site into `docs/.vitepress/dist`, and fails on a sample that does not compile or a dead link.
 
-## Deploying
+## Publishing
 
-Each push to `main` builds the site and publishes it to GitHub Pages at https://exemplar.l47.net (`.github/workflows/deploy.yaml`). The build installs the latest published exemplar packages, so its samples are type-checked against them. A benchmark report's pull request is the usual change that triggers it.
+The site is published by hand: run the Publish workflow (`.github/workflows/publish.yaml`) from the Actions tab, or with `gh workflow run publish.yaml --ref main`. It builds the site and publishes it to GitHub Pages at https://exemplar.l47.net. The build installs the latest published exemplar packages, so its samples are type-checked against them. Merging to `main` publishes nothing, so run it after merging a change the site should show, such as a benchmark report's pull request.
 
 ## Checks
 

@@ -1,15 +1,13 @@
-name: Deploy
+name: Publish
 
-# Publishes the site to GitHub Pages, built against the latest published exemplar packages.
+# Publishes the site to GitHub Pages, built against the latest published exemplar packages; started by hand.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
 
-# One deployment at a time; a running one finishes before the next starts.
+# One publication at a time; a running one finishes before the next starts.
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -32,7 +30,7 @@ jobs:
         with:
           path: docs/.vitepress/dist
 
-  deploy:
+  publish:
     needs: build
     runs-on: ubuntu-26.04
     permissions:

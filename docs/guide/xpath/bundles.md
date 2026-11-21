@@ -110,7 +110,8 @@ Each group is loaded with a dynamic `import()`, which bundlers emit as a separat
 group stays registered with the compiler, so later calls to `compile` can use it too.
 
 Only compilation is asynchronous: the returned executable is the same as one from `compile`, with the same synchronous
-evaluation methods. `compileAsync` exists on the lean compiler only, because the full compiler already has every group.
+evaluation methods. `compileAsync` exists on the lean compiler only, because the full compiler already has every group. The two methods share
+[the compiler's cache](/guide/xpath/#the-compiler-keeps-its-executables) of executables.
 
 ::: warning
 `compileAsync` detects function calls statically. A function that is looked up by a name computed at run time, with
